@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th colspan="3">Markup</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="markup in markups">
+      <td><a ui-sref="markups.view({ id: markup.Id })">{{markup.Name}}</a></td>
+      <td>{{markup.Amount}}</td>
+      <td>{{markup.ApplyTo}}</td>
+    </tr>
+  </tbody>
+</table>

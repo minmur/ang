@@ -1,0 +1,32 @@
+<table class="table" name="rulesForm" ng-form="rulesForm">
+  <theade>
+    <tr>
+      <th>Rule type</th>
+      <th>Validator</th>
+      <th>Values</th>
+      <th>Remove</th>
+    </tr>
+  </theade>
+  <tbody>
+  <tr ng-repeat="rule in markup.Rules">
+    <td>{{rule.RuleTypeDisplay}}</td>
+    <td>{{rule.ValidatorDisplay}}</td>
+    <td>
+        <span ng-repeat="value in rule.Values">
+          <span class="form-group" ng-class="{'has-error':!rulesForm['value-' + $parent.$index + '-' + $index].$valid}">
+          <input class="form-control" type="text" name="value-{{$parent.$index}}-{{$index}}" ng-model="value.JsonValue"
+                 required/>
+          <span class="messages" ng-if="rulesForm['value-' + $parent.$index + '-' + $index].$touched">
+            <span class="help-block" ng-if="rulesForm['value-' + $parent.$index + '-' + $index].$error.required">Value is required</span>
+          </span>
+        </span>
+          </span>
+    </td>
+    <td>
+      <button class="btn btn-sm btn-danger" ng-click="remove($index)"><i class="glyphicon glyphicon-minus"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+{{}}

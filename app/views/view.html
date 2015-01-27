@@ -1,0 +1,58 @@
+<h1>Edit <em>{{::markup.Name}}</em> markup</h1>
+
+<form name="markupForm" ng-controller="MarkupCtrl" ng-submit="save()" novalidate>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-xs-9">
+            <div ng-include="'views/partials/properties.html'"></div>
+          </div>
+          <div class="col-xs-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">Price type</div>
+              <div class="panel-body">
+                <div ng-include="'views/partials/price-type.html'"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">Rules</div>
+      <div class="panel-body">
+        <div ng-include="'views/partials/rules.html'"></div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Add new rule</div>
+      <div class="panel-body">
+        <div ng-include="'views/partials/rule.html'"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">Partners</div>
+      <div class="panel-body">
+        <div ng-include="'views/partials/partners.html'"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">Save</button>
+  </div>
+</div>
+
+</form>

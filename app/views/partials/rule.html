@@ -1,0 +1,24 @@
+<form name="newRuleForm" ng-controller="NewRuleFormController" ng-submit="submit()">
+  <div class="row">
+    <div class="col-xs-5">
+      <div class="form-group">
+        <label>Rule type</label>
+        <select class="form-control" ng-model="ruleType"
+                ng-options="type as type.display for type in ruleTypes">
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-5">
+      <div class="form-group">
+        <label>Validator</label>
+        <select class="form-control" ng-model="validator"
+                ng-options="vldtr as vldtr.display for vldtr in validators"></select>
+      </div>
+    </div>
+    <div class="col-xs-2">
+      <button class="btn btn-success" type="submit">Add</button>
+    </div>
+  </div>
+</form>
+
+

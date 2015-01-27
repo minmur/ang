@@ -1,0 +1,9 @@
+<ul class="list-unstyled" style="max-height: 200px;overflow-y: auto;">
+  <li ng-repeat="partner in markup.Partners">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="partner.Selected"> {{partner.Name}}
+      </label>
+    </div>
+  </li>
+</ul>
