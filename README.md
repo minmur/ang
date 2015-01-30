@@ -7,7 +7,7 @@ Test app for markups built with Angular.
 
 2. Download source of the app (https://github.com/minmur/ang/archive/master.zip)
 
-3. Go to the folder where you extracted the app and run these commands:
+3. Go to the ang-master folder and run these commands:
   * `npm install grunt-cli -g`
   * `npm install bower -g`
   * `npm install`
